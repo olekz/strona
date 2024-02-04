@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>formularze podsumowanie</title>
+    <meta charset="UTF-8">
+    <meta name="Robots" content="index">
+    <style>
+      #Form1 input{
+        position: absolute;
+        left: 150px;
+        background-color: cornsilk;
+        font-style: italic;
+        color: gray;
+    }
+    </style>
+  </head>
+  <body>
+
+<marquee behavior="scroll" direction="left" style="background-color: #70FCF9" scrollamount="3"><img src="brytyjski-kot-olowek.jpeg" width="800px" length="700px">
+</marquee>
+<!--  -->
+         <form name="form1" action="skrypt.php" method="post">
+           zawartość formularza
+           <fieldset>
+           <legend>Formularz<strong>  pola tekstowego</strong></legend>
+           <p><strong>Imię</strong>: <input type="text" name="Imie" value="Jan" size="30" maxlength="40" 
+           style="position: absolute; left: 150px; background-color: cornsilk; font-style: italic; color: gray "></p>
+           <p><strong>Nazwisko</strong>: <input type="text" name="Nazwisko" value="Kowalski" size="30" maxlength="40" 
+           style="position: absolute; left:150px; background-color: cornsilk; font-style: italic; color: gray "></p>
+           <p><strong>Zawód</strong>: <input type="text" name="Zawod" value="inżynier" size="30" maxlength="40" 
+           style="position: absolute; left:150px; background-color: cornsilk; font-style: italic; color: gray "></p>
+           </fieldset>
+         </form>
+<marquee behavior="scroll" direction="left" style="background-color: #70FCF9" scrollamount="3">to jest tekst 
+</marquee>
+<!-- Wysyłanie formularza poprzez pocztę elektroniczną.W polu tematu listu(subject) pojawi się temat ankiety 
+po dodaniu ?subject=.... np Ankieta na temat  należy jeszcze dodać  parametr enctype="text/plain".
+Po to ,aby dane dotarły w formie listu a nie załącznika-->
+         <form  enctype="text/plain" action="mailto:dproszek66@gmail.com? subject= Ankieta na temat" method="post">
+          zawartość formularza <br>
+          <input name="nazwa" id="identyfikator" type="text" value="wartość początkowa value" size="rozmiar pola w znakach"
+           maxlength="maksymalny rozmiar pola" title="" pattern="" placeholder=""><br>
+przykład   <br>
+           <input type="text" name="nazwisko" value="Kowalski" size="30" maxlength="40">
+          </form>
+<!-- logowanie -->
+<marquee behavior="scroll" direction="left" style="background-color: #70FCF9" scrollamount="5"> Logowanie
+</marquee>
+
+
+          <form name="logowanie" id="log" action="http://strona" method="post" enctype="text/plain" target="_top">
+          <p>Login<input name="login" id="log" type="text" value="login" size="20" maxlength="20"  
+          title="Jaki masz login?" required="required"></p>
+          <p>Hasło<input name="" id="haslo" type="password" value="Wpisz hasło" size="10" maxlength="10" pattern="maska wprawadza nia(pattern)" 
+          placeholder="tekst pomocniczy (placeholder)" title="Nie pamiętasz hasła" required="required"></p>
+          </form>
+
+<!--  Pole opcji(przełącznika) jest polem, w którym czytelnik strony wybiera jedną z dostępnych możliwości.
+W polu stosowany jest type="radio", który wprowadza tzw. przycisk radiowy. Czytelnik będzie wybierał tylko 
+jedną z możliwych wartości. Kliknięcie na jakiejś wartości powoduje jej zaznaczenie, ale zarazem usuwa zaznaczenie 
+z innej. Typ ten stosujemy wtedy, gdy nie można podać kilku wartości, gdyż jest to nielogiczne.
+Dodanie checked="checked", pole to będzie domyślnie zaznaczone.-->
+<marquee behavior="scroll" direction="right"style="background-color: #70FCF9" scrollamount="5"> Pole opcji type="radio"
+</marquee>
+        <form action="" method="post">
+        <b>Podaj swoją płeć.</b>
+          <p><input type="radio" name="plec" value="kobieta" checked="checked"> Kobieta</p>
+          <p><input type="radio" name="plec" value="mezczyzna"> Mężczyzna</p>                                                          
+                                                                  
+        </form>
+<!--Pole wyboru umożliwia dokonanie wyboru kilku możliwości jednocześnie, 
+np. zaznaczenie kilku języków, którymi się włada, czy kilku używanych przeglądarek internetowych.
+W polu stosowany jest type="checkbox", który wprowadza pole w postaci kwadratu. Kliknięcie w nim powoduje zaznaczenie pola,
+ponowne kliknięcie usuwa zaznaczenie.
+ Jeśli zdefiniujemy kilka pól, czytelnik strony będzie mógł zaznaczyć parę z nich lub wszystkie, zależnie od treści.   -->
+<marquee behavior="alternate" direction="right"  style="background-color: #C0FDA6" 
+scrollamount="1" >Pole wyboru type="checkbox"</marquee>
+                 <form action="" method="get">
+                 <b>Podaj jezyk</b>
+                       <p><input type="checkbox" name="jezyk" value="angielski"> angielski</p>
+                       <p><input type="checkbox" name="jezyk" value="francuski"> francuski</p>
+                       <p><input type="checkbox" name="jezyk" value="rosyjski"> rosyjski</p>
+                       <p><input type="checkbox" name="jezyk" value="niemiecki"> niemiecki</p>
+                       <p><input type="checkbox" name="jezyk" value="wloski"> włoski</p>
+                       <p><input type="checkbox" name="jezyk" value="hiszpanski">hiszpański</p>               
+                 </form>
+<!--Lista wyboru Lista wyboru select służy do tworzenia rozwijanych menu,  
+zawierających kilka opcji. Czytelnik strony może wybrać jedną z nich lub kilka. Składnia jest następująca:  -->
+<marquee behavior="scroll" direction="up" style="background-color: #E2AFFE" scrollamount="1" >
+Lista wyboru (opcji) select</marquee> 
+ 
+
+         <form action="" method="post">
+               <p><strong>Wybierz produkt:</strong></p>
+         <div>
+                            <select name="owoce" size="3">
+                                    <option> Truskawki
+                                    <option> Maliny
+                                    <option> Poziomki
+                                    <option> Wiśnie
+                                    <option> Śliwki
+                            </select>
+         </div>
+         </form>
+         <h3>Listę opcji możemy dodatkowo grupować, wykorzystując polecenie optgroup.</h3>
+          <form action="" method="post">                                                                                  
+                                                                                          
+                   <p><strong>Wybierz produkt:</strong></p>
+          <div>
+                   <select name="owoce" size="8">
+                           <optgroup label="Owoce miękkie">
+                                     <option> Truskawki
+                                     <option> Maliny
+                                     <option> Poziomki
+                           </optgroup>
+                                <optgroup label="Owoce twarde">
+                                <option> Jabłka
+                                <option> Gruszki
+                                </optgroup>
+                      </select>
+              </div>
+<command type="submit" label="opis" checked="checked" icon="ok.gif" onclick="skrypt.php">
+
+         </form>
+<!--Obszar tekstowy o objętości do 1024 znaków (textarea name="nazwa" rows="ilość wierszy=x" cols="ilość kolumn=y").-->
+<marquee behavior="alternate"style="background-color: #E2AFFE" direction="left">Obszar tekstowy: textarea name="nazwa" rows="ilość wierszy=x" cols="ilość kolumn=y"</marquee>
+         
+      <fieldset>
+                <legend>Formularz - przykład <strong>obszaru tekstowego</strong></legend>
+                                  <form action="mailto: dproszek66@gmail.com?subject=Wiadomość ze strony...." method="post">
+                                  <p><strong>Wpisz swoje uwagi:</strong></p>
+                <p><textarea name="uwagi" rows="8" cols="50" style="color: gray; font-style: italic; ">
+                tutaj jest miejsce na twoje swobodne uwagi (do 1024 znaków)
+                </textarea></p>
+                               </form>
+      </fieldset>
+               
+<fieldset type="dashed">
+  <legend>dowolny tekst</legend>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim
+convallis bibendum. In non ligula tellus. Aliquam est turpis, pretium at
+pulvinar vel, bibendum sit amet ligula. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. Nullam tellus diam,
+ultrices vitae scelerisque vel, lacinia ut risus. Praesent massa lectus,
+condimentum sit amet malesuada egestas, consectetur vel metus. Suspendisse
+adipiscing porta nisi in fringilla. Mauris rutrum ultrices diam, a lobortis
+erat porta sit amet. Duis porttitor, nibh a porttitor venenatis, orci lorem
+aliquet libero, ac iaculis metus velit eget nibh. Suspendisse facilisis, nulla
+ut pellentesque sodales, enim ligula volutpat felis, ac semper mauris augue
+vitae ipsum. Suspendisse semper justo eu mauris ullamcorper rutrum.
+</fieldset>
+</body>
+</html>
