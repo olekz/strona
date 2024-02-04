@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Formularz zgłoszeniowy</title>
+    <meta charset="UTF-8">
+    <meta name="Description" content="odsylacze">
+    <meta name="Keywords" content="odsylacze, linki">
+    <meta name="Author" content="Dora">
+    <meta name="Robots" content="index">
+    <link rel="stylesheet" href="styl.css" type="text/css">
+    <link rel="shortcut icon" href="logo.png">
+    <script type = "text/javascript" src="skrypt.js"></script>
+    <style type="text/css">
+      form{
+        text-align: center;
+      }
+
+    </style>
+    </head>
+    <body>
+   
+    <form action="submit.php" method="post" enctype="multipart/form-data" style="background-color: #f2f2f2; box-shadow: 5px 5px 5px #888888;">
+      <label for="imie" style="font-weight: bold;">Imię:</label>
+      <input type="text" id="imie" name="imie" maxlength="30" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <label for="nazwisko" style="font-weight: bold;">Nazwisko:</label>
+      <input type="text" id="nazwisko" name="nazwisko" maxlength="30" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <label for="telefon" style="font-weight: bold;">Numer telefonu:</label>
+      <input type="tel" id="telefon" name="telefon"maxlength="9"required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <label for="data_urodzenia" style="font-weight: bold;">Data urodzenia:</label>
+      <input type="date" id="data_urodzenia" name="data_urodzenia" min="1959-01-01"max="2009-12-31" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <label for="adres" style="font-weight: bold;">Adres:</label>
+      <input type="text" id="adres" name="adres" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <label for="email" style="font-weight: bold;">Adres e-mail:</label>
+      <input type="email" id="email" name="email" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <label for="zdjecie" style="font-weight: bold;">Zdjęcie:</label>
+      <input type="file" id="zdjecie" name="zdjecie" accept="image/*" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <label for="opis" style="font-weight: bold;">Opis dlaczego chcesz dołączyć do pracy:</label><br>
+      <textarea id="opis" name="opis" rows="5" cols="50" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"></textarea><br><br>
+      <label for="cv" style="font-weight: bold;">Załącz plik CV:</label>
+      <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required style="border: 2px solid #ccc; border-radius: 4px; font-size: 16px; padding: 12px 20px 12px 40px; background-color: white;"><br><br>
+      <input type="submit" value="Wyślij zgłoszenie" style="background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; padding: 12px 20px;">
+    </form>
+    
+
+</body>
